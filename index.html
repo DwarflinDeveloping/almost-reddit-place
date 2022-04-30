@@ -712,7 +712,13 @@
 
                 sketch.updatePixels();
 
-                sketch.saveCanvas(canvas, "myCanvas", "png");
+                const currentDate = new Date();
+                const fileName = currentDate.getFullYear() + currentDate.getMonth() + currentDate.getDate() + '_' +
+                                 currentDate.getHours() + '-' + currentDate.getMinutes() + '-' + currentDate.getSeconds();
+                const fileExtension = "png";
+
+                sketch.saveCanvas(canvas, fileName, fileExtension);
+                alert("A copy of the canvas has been saved to your Downloads folder.");
               };
             };
 
@@ -840,7 +846,7 @@
       const app = alpineSetup();
     </script>
   </head>
-  <body>
+  <body class="overflow-hidden">
     <div x-data="app">
       <div class="fixed bg-gray-100 dark:bg-slate-900 inset-0 bg-primary custom-bg z-[5]"></div>
 
