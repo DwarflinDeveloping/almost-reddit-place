@@ -713,7 +713,7 @@
                 sketch.updatePixels();
 
                 const currentDate = new Date();
-                const fileName = currentDate.getFullYear() + currentDate.getMonth() + currentDate.getDate() + '_' +
+                const fileName = currentDate.getFullYear() + '-' + currentDate.getMonth() + '-' + currentDate.getDate() + '_' +
                                  currentDate.getHours() + '-' + currentDate.getMinutes() + '-' + currentDate.getSeconds();
                 const fileExtension = "png";
 
@@ -912,11 +912,11 @@
             >
               <div
                 x-text="state.currentPixelData ? printDate(state.currentPixelData.createdAt) : ''"
-                class="p-1 px-2 text-xs text-slate-200 bg-slate-500 rounded-lg"
+                class="p-1 px-2 text-xs dark:text-white text-black dark:bg-slate-600 bg-gray-100 rounded-lg"
               ></div>
               <div
                 x-text="state.currentPixelData ? state.currentPixelData.userId : ''"
-                class="p-2 text-sm text-slate-500 bg-slate-900 rounded-lg"
+                class="p-2 text-sm dark:text-white text-black dark:bg-slate-800 bg-gray-200 rounded-lg"
               ></div>
             </div>
 
@@ -961,9 +961,17 @@
                     fill="currentColor"
                   >
                     <path
+                      d="M 8.75,1 V 8.75 H 1 v 2.5 H 8.75 V 19 h 2.5 V 11.25 H 19 V 8.75 H 11.25 V 1 Z"
                       fill-rule="evenodd"
-                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                       clip-rule="evenodd"
+                    />
+                    <circle
+                      r="6"
+                      cy="10"
+                      cx="10"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      style="fill:none;stroke:currentColor;stroke-width:2"
                     />
                   </svg>
                 </button>
