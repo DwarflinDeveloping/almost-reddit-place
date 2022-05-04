@@ -1207,13 +1207,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
-.dark .dark\:bg-slate-700\/75 {
-  background-color: rgb(51 65 85 / 0.75);
-}
-
 .dark .dark\:bg-slate-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-slate-700\/75 {
+  background-color: rgb(51 65 85 / 0.75);
 }
 
 .dark .dark\:text-white {
